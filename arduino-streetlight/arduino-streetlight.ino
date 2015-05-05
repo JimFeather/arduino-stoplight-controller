@@ -10,18 +10,19 @@ void setup()
   pinMode(RELAY3, OUTPUT);
 
 }
- 
  void loop()
 {
-   digitalWrite(RELAY1,LOW);           // Green light on
-   delay(4000);
-   digitalWrite(RELAY1,HIGH);          // Green light off
+  lightItUp(RELAY1);
+  lightItUp(RELAY2);
+  lightItUp(RELAY3);
+}
  
-   digitalWrite(RELAY2,LOW);           // Yellow Light on
+ /**
+ Function to light up the lights connected to the passed in pin number with a 4 second light time.
+ */
+ void lightItUp(int pin)
+ {
+   digitalWrite(pin,LOW);
    delay(4000);
-   digitalWrite(RELAY2,HIGH);          // Yellow light off
- 
-   digitalWrite(RELAY3,LOW);           // Red light on
-   delay(4000);
-   digitalWrite(RELAY3,HIGH);          // Red light off  
+   digitalWrite(pin,HIGH);
  }
