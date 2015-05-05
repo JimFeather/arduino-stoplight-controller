@@ -1,20 +1,20 @@
-#define RELAY1  6                        
-#define RELAY2  7                        
-#define RELAY3  8                        
+#define GREEN_RELAY  6                        
+#define YELLOW_RELAY  7                        
+#define RED_RELAY  8                        
 
  
 void setup()
 {    
-  pinMode(RELAY1, OUTPUT);       
-  pinMode(RELAY2, OUTPUT);
-  pinMode(RELAY3, OUTPUT);
+  pinMode(GREEN_RELAY, OUTPUT);       
+  pinMode(YELLOW_RELAY, OUTPUT);
+  pinMode(RED_RELAY, OUTPUT);
 
 }
  void loop()
 {
-  lightItUp(RELAY1);
-  lightItUp(RELAY2);
-  lightItUp(RELAY3);
+  lightItUp(GREEN_RELAY);
+  lightItUp(YELLOW_RELAY);
+  lightItUp(RED_RELAY);
 }
  
  /**
